@@ -1,5 +1,8 @@
-package server;
+package server.network;
 
+import server.commandprocessor.ServerCommandParser;
+import server.commandprocessor.ServerCommandSender;
+import server.utils.StreamContainer;
 import sharedclasses.Constants;
 
 import java.io.DataInputStream;
@@ -44,7 +47,7 @@ public class MonoClientThread extends Thread {
                     Thread.sleep(Constants.DEFAULT_SLEEP_TIME);
                 }
                 login = dataInputStream.readUTF();
-                ServerCommandSender.getInstance().sendMessageToAll(login+Constants.CONNECT_MESSAGE);
+                ServerCommandSender.getInstance().sendMessageToAll(login + Constants.CONNECT_MESSAGE);
             } catch (InterruptedException | IOException e) {
                 e.printStackTrace();
             }

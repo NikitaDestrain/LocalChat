@@ -1,9 +1,9 @@
 package client.commandprocessor;
 
 import client.gui.ChatWindow;
-import sharedclasses.Command;
 import sharedclasses.Constants;
-import xml.XmlUtils;
+import sharedclasses.model.Command;
+import sharedclasses.xml.XmlUtils;
 
 public class ClientCommandParser {
 
@@ -20,7 +20,7 @@ public class ClientCommandParser {
     public void parseAndDoAction(String command) {
         Command commandObject = XmlUtils.getInstance().parseToCommand(command);
 
-        switch(commandObject.getType()){
+        switch (commandObject.getType()) {
             case Constants.MESSAGE:
                 ChatWindow.instance.updateTextArea(commandObject.getMessage());
         }

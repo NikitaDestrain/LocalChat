@@ -1,9 +1,10 @@
-package server;
+package server.commandprocessor;
 
-import sharedclasses.Command;
-import sharedclasses.CommandFactory;
+import server.utils.StreamContainer;
 import sharedclasses.Constants;
-import xml.XmlUtils;
+import sharedclasses.factories.CommandFactory;
+import sharedclasses.model.Command;
+import sharedclasses.xml.XmlUtils;
 
 import java.io.DataOutputStream;
 import java.io.IOException;

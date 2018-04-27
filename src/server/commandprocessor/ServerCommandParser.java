@@ -1,8 +1,9 @@
-package server;
+package server.commandprocessor;
 
-import sharedclasses.Command;
+import server.ServerProcessor;
 import sharedclasses.Constants;
-import xml.XmlUtils;
+import sharedclasses.model.Command;
+import sharedclasses.xml.XmlUtils;
 
 public class ServerCommandParser {
 

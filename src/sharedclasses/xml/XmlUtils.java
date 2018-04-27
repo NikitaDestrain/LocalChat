@@ -1,6 +1,6 @@
-package xml;
+package sharedclasses.xml;
 
-import sharedclasses.Command;
+import sharedclasses.model.Command;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -23,7 +23,7 @@ public class XmlUtils {
     }
 
     public String commandToXmlString(Command command) {
-        try(StringWriter sw = new StringWriter()) {
+        try (StringWriter sw = new StringWriter()) {
             JAXBContext context = JAXBContext.newInstance(Command.class);
             Marshaller marshaller = context.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);

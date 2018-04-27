@@ -1,5 +1,7 @@
-package server;
+package server.network;
 
+import server.ServerProcessor;
+import server.utils.PortGenerator;
 import sharedclasses.Constants;
 
 import java.io.IOException;
@@ -17,7 +19,6 @@ public class ServerNetworkFacade extends Thread {
     private ServerSocket serverDataSocket;
     private Socket clientDataSocket;
     private ExecutorService executeIt;
-    //private MessageBox messageBox = MessageBox.getInstance();
     private ServerProcessor serverProcessor = ServerProcessor.getInstance();
 
     public ServerNetworkFacade() {
@@ -37,7 +38,6 @@ public class ServerNetworkFacade extends Thread {
                 serverProcessor.addClient(clientNotificationPort, monoClientThread);
             } catch (IOException e) {
                 e.printStackTrace();
-                //messageBox.showMessage(ConstantsClass.ERROR_CLIENT_CONNECTION);
             }
         }
     }
@@ -48,7 +48,6 @@ public class ServerNetworkFacade extends Thread {
             serverDataSocket = new ServerSocket(port);
         } catch (IOException e) {
             e.printStackTrace();
-            //messageBox.showMessage(ConstantsClass.ERROR_SERVER_START);
         }
     }
 

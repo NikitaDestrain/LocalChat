@@ -1,4 +1,4 @@
-package server;
+package server.utils;
 
 import java.io.DataOutputStream;
 import java.util.*;
@@ -45,19 +45,19 @@ public class StreamContainer {
         return Collections.unmodifiableList(list);
     }
 
-    protected void removeNotificationOutputStream(Integer key) {
+    public void removeNotificationOutputStream(Integer key) {
         clientNotificationOutputStreams.remove(key);
     }
 
-    protected void addNotificationOutputStream(Integer key, DataOutputStream dataOutputStream) {
+    public void addNotificationOutputStream(Integer key, DataOutputStream dataOutputStream) {
         clientNotificationOutputStreams.put(key, dataOutputStream);
     }
 
-    protected void addClientDataOutputStream(Integer key, DataOutputStream dataOutputStream) {
+    public void addClientDataOutputStream(Integer key, DataOutputStream dataOutputStream) {
         clientDataOutputStreams.put(key, dataOutputStream);
     }
 
-    protected void removeClientDataOutputStream(Integer key) {
+    public void removeClientDataOutputStream(Integer key) {
         clientDataOutputStreams.remove(key);
     }
 

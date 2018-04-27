@@ -1,4 +1,6 @@
-package sharedclasses;
+package sharedclasses.factories;
+
+import sharedclasses.model.Command;
 
 public class CommandFactory {
 

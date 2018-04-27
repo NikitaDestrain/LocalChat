@@ -2,7 +2,6 @@ package client.network;
 
 import client.commandprocessor.ClientCommandParser;
 import sharedclasses.Constants;
-import xml.XmlUtils;
 
 import java.io.DataInputStream;
 import java.io.IOException;

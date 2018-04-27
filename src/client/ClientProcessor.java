@@ -1,7 +1,6 @@
 package client;
 
 import client.gui.ChatWindow;
-import client.network.ClientNetworkFacade;
 
 import javax.swing.*;
 
