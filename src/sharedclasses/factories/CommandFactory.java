@@ -4,7 +4,7 @@ import sharedclasses.model.Command;
 
 public class CommandFactory {
 
-    public static Command createCommand(String type, String message) {
+    public synchronized static Command createCommand(String type, String message) {
         return new Command(type, message);
     }
 }

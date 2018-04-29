@@ -12,12 +12,12 @@ public class ServerCommandParser {
     private ServerCommandParser() {
     }
 
-    public static ServerCommandParser getInstance() {
+    public synchronized static ServerCommandParser getInstance() {
         if (instance == null) instance = new ServerCommandParser();
         return instance;
     }
 
-    public void parseAndDoAction(String command) {
+    public synchronized void parseAndDoAction(String command) {
         Command commandObject = XmlUtils.getInstance().parseToCommand(command);
 
         System.out.println(commandObject);

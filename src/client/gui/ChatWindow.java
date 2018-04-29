@@ -42,6 +42,7 @@ public class ChatWindow extends JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
         setVisible(false);
+        setTitle("Chat");
 
         createAllPanel();
         add(allPanel);

@@ -22,7 +22,7 @@ public class XmlUtils {
         return instance;
     }
 
-    public String commandToXmlString(Command command) {
+    public synchronized String commandToXmlString(Command command) {
         try (StringWriter sw = new StringWriter()) {
             JAXBContext context = JAXBContext.newInstance(Command.class);
             Marshaller marshaller = context.createMarshaller();
@@ -35,7 +35,7 @@ public class XmlUtils {
         return null;
     }
 
-    public Command parseToCommand(String xml) {
+    public synchronized Command parseToCommand(String xml) {
         Command command;
         try {
             JAXBContext context = JAXBContext.newInstance(Command.class);
