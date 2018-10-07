@@ -1,4 +1,4 @@
-#**Local chat**
+# Local chat
 
 This program is designed to work on a local network, but can also use a connection to an external URL.
 
